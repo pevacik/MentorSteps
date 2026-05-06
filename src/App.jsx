@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Counter from './components/counter'
 import ClassCounter from './components/ClassCounter'
+import './components/styles/App.css'
 
 function App() {
   const [value, setValue] = useState('текст в инпуте')
@@ -10,7 +11,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className='App'>
       <Counter />
       <ClassCounter />
 
