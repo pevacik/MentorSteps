@@ -1,10 +1,10 @@
-export default function Postitem() {
+const Postitem = (props) => {
   return (
     <div>
       <div className='post'>
         <div className='post__content'>
-          <strong>1. Javascript</strong>
-          <div>Javascript - язык програмирования</div>
+          <strong>{props.post.id}.{props.post.title}</strong>
+          <div>{props.post.body}</div>
         </div>
         <div className='post__btns'>
           <button>Удалить</button>
@@ -13,3 +13,5 @@ export default function Postitem() {
     </div>
   )
 }
+
+export default Postitem
