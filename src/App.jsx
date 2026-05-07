@@ -1,22 +1,14 @@
 import Counter from './components/counter'
 import ClassCounter from './components/ClassCounter'
 import './components/styles/App.css'
+import Postitem from './components/Postitem'
 
 function App() {
   return (
     <div className='App'>
       <Counter />
       <ClassCounter />
-
-      <div className='post'>
-        <div className='post__content'>
-          <strong>1. Javascript</strong>
-          <div>Javascript - язык програмирования</div>
-        </div>
-        <div className='post__btns'>
-          <button>Удалить</button>
-        </div>
-      </div>
+      <Postitem />
     </div>
   )
 }
