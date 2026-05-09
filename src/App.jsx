@@ -5,6 +5,7 @@ import Postitem from './components/Postitem'
 import { useState } from 'react'
 import PostList from './components/PostList'
 import Mybutton from './components/UI/button/Mybutton'
+import MyInput from './components/UI/input/MyInput'
 
 function App() {
   const [posts, setPosts] = useState([
@@ -16,8 +17,8 @@ function App() {
   return (
     <div className='App'>
       <form>
-        <input type='text' placeholder='Название поста' />
-        <input type='text' placeholder='Описание поста' />
+        <MyInput type='text' placeholder='Название поста' />
+        <MyInput type='text' placeholder='Описание поста' />
         <Mybutton>Создать пост</Mybutton>
       </form>
       <PostList posts={posts} title='Список постов 1' />
