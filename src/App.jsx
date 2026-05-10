@@ -27,9 +27,16 @@ function App() {
   const [selectedSort, setSelectedSort] = useState('')
   const [searchQuary, setsearchQuary] = useState('')
 
-  const sortedPosts = [...posts].sort((a, b) =>
-    a[sort].localeCompare(b[sort]),
-  )
+  const sortedPosts = getSortedPosts()
+
+  function getSortedPosts() {
+    if (selectedSort) {
+      return [...posts].sort((a, b) =>
+        a[selectedSort].localeCompare(b[selectedSort]),
+      )
+    }
+    return posts
+  }
 
   const createPost = (newPost) => {
     setPosts([...posts, newPost])
@@ -41,7 +48,6 @@ function App() {
 
   const sortPosts = (sort) => {
     setSelectedSort(sort)
-    setPosts()
   }
 
   return (
@@ -75,7 +81,7 @@ function App() {
       {posts.length ? (
         <PostList
           remove={removePost}
-          posts={posts}
+          posts={sortedPosts}
           title='Список постов 1'
         />
       ) : (
