@@ -4,7 +4,8 @@
   "semi": false,
   "singleQuote": true,
   "jsxSingleQuote": true,
-  "printWidth": 60,
+  "printWidth": 80,
   "bracketSameLine": false,
-  "htmlWhitespaceSensitivity": "ignore"
+  "htmlWhitespaceSensitivity": "css",
+  "endOfLine": "auto"
 }

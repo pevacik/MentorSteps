@@ -1,14 +1,8 @@
-const MySelect = ({
-  options,
-  defaultValue,
-  value,
-  onChange,
-}) => {
+const MySelect = ({ options, defaultValue, value, onChange }) => {
   return (
     <select
       value={value}
-      onChange={(e) => onChange(e.target.value)}
-    >
+      onChange={(e) => onChange(e.target.value)}>
       <option disabled value=''>
         {defaultValue}
       </option>
