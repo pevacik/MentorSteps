@@ -1,10 +1,7 @@
-import { BrowserRouter, Link, Navigate, Route, Routes } from 'react-router-dom'
-import './components/styles/App.css'
-import About from './components/pages/About'
-import Posts from './components/pages/Posts'
-import Navbar from './components/navbar/Navbar'
-import Error from './components/pages/Error'
+import { BrowserRouter } from 'react-router-dom'
 import AppRouter from './components/AppRouter'
+import Navbar from './components/navbar/Navbar'
+import './components/styles/App.css'
 
 function App() {
   return (
