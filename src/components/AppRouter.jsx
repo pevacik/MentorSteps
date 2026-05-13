@@ -1,8 +1,15 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { publicRoutes, privateRoutes } from '../router'
+import { useContext } from 'react'
+import { AuthContext } from './context'
+import Loader from './UI/loader/Loader'
 
 const AppRouter = () => {
-  const isAuth = false
+  const {isAuth, isLoading} = useContext(AuthContext)
+  if (isLoading) {
+    return <Loader/>
+  }
+
   return (
     isAuth
       ? <Routes>
@@ -12,6 +19,7 @@ const AppRouter = () => {
             <Route
               element={<route.component />}
               path={route.path}
+              key={route.path}
             />
           )
         })}
@@ -24,6 +32,7 @@ const AppRouter = () => {
             <Route
               element={<route.component />}
               path={route.path}
+              key={route.path}
             />
           )
         })}
